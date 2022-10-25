@@ -5,20 +5,11 @@ import { Container } from "./styles";
 
 interface TaskProps {
   tasks: ITask[];
-  deleteTask: (arraytasks: Array<ITask>) => void
+  changeTaskArray: (arraytasks: Array<ITask>) => void;
 }
 
-
-
-export function TaskContainer({ tasks, deleteTask }: TaskProps) {
-  
-  function numberOfCompleteTasks() {
-    let number = tasks.filter((task) => task.done === true)
-    console.log(number)
-    return number.length
-  }
-
-
+export function TaskContainer({ tasks, changeTaskArray }: TaskProps) {
+  const number = tasks.filter((task) => task.done === true).length;
 
   return (
     <Container>
@@ -27,11 +18,21 @@ export function TaskContainer({ tasks, deleteTask }: TaskProps) {
           Tarefas criadas <span>{tasks.length}</span>
         </div>
         <div>
-          Concluídas <span>{numberOfCompleteTasks()}</span>
+          Concluídas{" "}
+          <span>
+            {number} de {tasks.length}
+          </span>
         </div>
       </header>
       {tasks.length > 0 ? (
-        tasks.map((task) => <Task key={task.text} deleteTask={deleteTask} task={task} tasks={tasks}  />)
+        tasks.map((task) => (
+          <Task
+            key={task.text}
+            changeTaskArray={changeTaskArray}
+            task={task}
+            tasks={tasks}
+          />
+        ))
       ) : (
         <EmptyList />
       )}

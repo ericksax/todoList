@@ -1,7 +1,6 @@
 import { styled } from "../../styles";
 import * as Checkbox from "@radix-ui/react-checkbox";
 
-
 export const CheckboxRoot = styled(Checkbox.Root, {
     background: "transparent",
     border: "2px solid $blue",
@@ -32,4 +31,13 @@ export const Container = styled('div', {
     background: '$gray-500',
     border: '1px solid $gray-400',
     borderRadius: '8px',
+
+    ".done": {
+      textDecoration: "line-through"
+    },
+
+    "div:nth-child(2)": {
+      width: '100%',
+      display: 'flex',
+    }
 })

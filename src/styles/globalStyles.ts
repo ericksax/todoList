@@ -23,7 +23,7 @@ export const globalStyles = globalCss({
     '.wrapper': {
         width: '100%',
         maxWidth: '46rem',
-        padding: '2rem',
-        
+        padding: '0 2rem',
+        margin: 'auto'
     }
 }) 

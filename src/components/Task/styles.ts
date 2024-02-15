@@ -24,6 +24,7 @@ export const CheckboxRoot = styled(Checkbox.Root, {
 export const Container = styled('div', {
     width: '100%',
     padding: '1rem',
+    height: '100%',
     minHeight: '4.5rem',
     display: 'flex',
     justifyContent: 'space-between',
@@ -31,6 +32,7 @@ export const Container = styled('div', {
     background: '$gray-500',
     border: '1px solid $gray-400',
     borderRadius: '8px',
+    overflow: 'hidden',
 
     ".done": {
       textDecoration: "line-through"

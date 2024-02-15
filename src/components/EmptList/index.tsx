@@ -1,4 +1,4 @@
-import ClipBoard from "../../assets/Clipboard.svg";
+import ClipBoard from "/assets/Clipboard.svg";
 import { Main } from "./styles";
 
 export function EmptyList() {

@@ -7,12 +7,16 @@ export const Container = styled('div', {
     height: '1rem',
     marginTop: '4rem',
     gap: '1.5rem',
+    
 
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
 
     header: {
+        marginTop: '1.5rem',
+        gap: '1rem',
+        flexWrap: 'wrap',
         width: '100%',
         display: 'flex',
         justifyContent: 'space-between',

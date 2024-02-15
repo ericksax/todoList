@@ -18,5 +18,12 @@ export const globalStyles = globalCss({
         fontFamily: 'Inter, sans-serif',
         fontSize: '16px',
       
+    },
+
+    '.wrapper': {
+        width: '100%',
+        maxWidth: '46rem',
+        padding: '2rem',
+        
     }
 }) 

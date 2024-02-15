@@ -9,8 +9,10 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Home/>
+      <Header />
+      <main className="wrapper">
+        <Home />
+      </main>
     </>
   )
 }
